@@ -1,4 +1,8 @@
-# Astro Starter Kit: Minimal
+# danidiet
+
+Diet for Dani
+
+## Astro Starter Kit: Minimal
 
 ```sh
 npm create astro@latest -- --template minimal
