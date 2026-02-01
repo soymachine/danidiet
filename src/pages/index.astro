@@ -1,5 +1,5 @@
 ---
-
+const totalPhotos = 5
 ---
 
 <html lang="en">
@@ -10,12 +10,17 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<link rel="stylesheet" href="/danidiet/css/style.css" />
 	</head>
 	<body>
 		<script type="module" >
-			import Controller from "/public/js/Controller.js";
+			import Controller from "/danidiet/public/js/Controller.js";
 			const controller = new Controller();
 		</script>
-		<img src="/public/imgs/ashley_bts_0.webp" alt="">
+		{Array.from({length: totalPhotos}, (_, i) => i + 1).map((i) => (
+			<div class="photo-wrapper">
+				<img class="photo" src={`/danidiet/imgs/photo_${i}.webp`} alt="">
+			</div>
+		))}
 	</body>
 </html>

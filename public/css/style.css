@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.photo-wrapper {
+    position:absolute;
+    cursor: pointer;
+    /* not text-selectable */
+    user-select: none;
+}
+
+.photo {
+    --width:400px;
+    width: var(--width);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
